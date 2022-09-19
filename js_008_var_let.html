@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js_008_var_let.html</title>
+  </head>
+  <body>
+    <script>
+      let bar = 1; // 값이 나와야 하지만 블록안에 값이 먼저 일어나고 일시적 상태에 빠진 값 때문에 입력한 선언 값이 출력되지 않는다.
+      {
+        console.log(bar);
+        let bar = 2; // 일시적 사각상태에 빠졌다.
+      }
+
+      //   console.log(wrap);
+      //   let wrap = 3;
+
+      변수(variable);
+
+      //   datatype : 숫자, 문자열, 논리, null, undefined
+      //   출력 : %d %f %s ${}
+      //   변수선언 할 때 사용되는 키워드 : var, let, const
+      //   hoisiting : 최상위로 끌어 올리는 기능(자동으로 발생)
+    </script>
+  </body>
+</html>

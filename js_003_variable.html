@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js_003_variable.html</title>
+  </head>
+  <body>
+    <script>
+      // 변수(variable) : 변하는 데이터(값)을 저장할 수 있는 메모리 공간이다.
+      // var(많이 사용 x), let(일반 변수), const(상수) : 변수의 종류
+      // console.log(3);
+      // console.log(3);
+      // 변수 변수명 = 값;
+      // 프로그램의 식은 결과 = 식 으로 진행이 된다.
+
+      let data = 3; // 변수 선언
+      console.log(data);
+      console.log(`data:%d`, data); // `(빽키)
+
+      // 출력기호 : %d(숫자), %f(실수), %s(문자열), ${}(논리)/%b(자바에서만 사용가능)
+      // '' : 문자열을 입력할때
+      let a = 'javascript';
+      console.log(`a=%s`, a);
+
+      // true, false 는 소문자로 입력해야 한다.
+      let b = true;
+      console.log(`b=${b}`);
+
+      let c = 4.58;
+      // chrome에서는 숫자 서식이 지원 안됨
+      // console.log(`c=%.1f`, c);
+      console.log(`c=%f`, c);
+
+      // null : 존재하지만 값이나 자료형이 존재하지 않는다.
+      let d = null;
+      console.log(`d=${d}`);
+
+      // Uncaught ReferenceError: e is not defined
+      console.log(`e=${e}`);
+    </script>
+  </body>
+</html>

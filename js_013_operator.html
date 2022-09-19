@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js_013_operator.html</title>
+  </head>
+  <body>
+    <script>
+      /*
+        비교연산자 : >, <, >=, <=, ==, !=, ===, !==
+
+        == : 메모리에 저장된 값만 비교
+        === : 메모리에 저장된 값과 데이터 타입을 비교
+      */
+
+      let numX = 5;
+      let numY = 5;
+      console.log(`numX==numY:${numX == numY}`); // numX==numY:true
+      console.log(`numX==numY:${numX === numY}`); // numX===numY:true
+
+      /* 
+        객체로 값을 주어 메모리에 주소로 저장이 되어있다.
+        objX와 objY는 주소가 달라졌기 때문에 값이 달라졌다.
+      */
+      let objX = new Number(numX);
+      let objY = new Number(numY);
+      console.log(`objX==bojY:${objX == objY}`); // objX==bojY:false
+      console.log(`objX===bojY:${objX === objY}`); // objX===bojY:false
+
+      /*
+        dataX는 숫자로 메모리에 저장. dataY는 문자로 메모리에 저장.
+        데이터 값이 다르기 때문에 비교연산자 === 이 false로 출력된다.
+      */
+      let dataX = 3;
+      let dataY = '3';
+      console.log(`dataX==dataY:${dataX == dataY}`); // dataX==dataY:true
+      console.log(`dataX===dataY:${dataX === dataY}`); // dataX===dataY:false
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js_007_var_let.html</title>
+  </head>
+  <body>
+    <script>
+      // 변수 선언 전 : Uncaught ReferenceError: foo is not defined
+      // 변수 선언 후 : foo:undefined (undefined : 변수값을 주지 않은 상태)
+      console.log(`foo:${foo}`);
+
+      // 변수 선언 전 : Uncaught ReferenceError: bar is not defined
+      // 변수 선언 후 : Uncaught ReferenceError: Cannot access 'bar' before initialization (일시적 사각지대)
+      console.log(`bar:${bar}`);
+
+      var foo;
+      let bar;
+
+      // var 키워드로 선언한 변수는 런타임 이전에 선언 단계와 초기화 단계가 같이 실행된다.
+    </script>
+  </body>
+</html>
