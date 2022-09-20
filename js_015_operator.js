@@ -1,0 +1,27 @@
+// js_018_operator.js
+
+// console.log('hello javascript');
+// console.log('test javascript');
+
+// 대입연산자
+let a = 3;
+let b = 4;
+let sum = 0;
+
+sum = a + b;
+console.log(`sum=${sum}`);
+console.log(sum);
+
+let data = 0;
+data = data + a;
+data += a;
+console.log(`data=${data}`);
+
+// 연산자 우선순위
+// 단항연산자 > 산술 > 비교 > 논리 > 조건 > 대입
+
+let x = 5;
+let y = 8;
+let z = 10;
+let result = x > y ? X++ : ++y; // ++가 피연산자 앞쪽에 위치해야 우선순위가 높다.
+console.log(`result=${result}, x=${x}, y=${y}`);
