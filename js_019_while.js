@@ -38,4 +38,4 @@ let input = 'N';
 do {
   console.log(`고객님 주문하시겠습니까?(Y/N)`);
   input = prompt(`입력`);
-} while (input == 'Y');
+} while (input == 'N');

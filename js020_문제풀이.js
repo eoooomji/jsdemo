@@ -24,8 +24,12 @@ if (num % 10 == 0) {
 
 console.log(`[문제2]`);
 let a = 123;
-let b = 10;
-console.log(`필요한 바구니의 수 : ${a / b}개`);
+let b = a / 10;
+if (a % 10 == 0) {
+  console.log(`필요한 바구니의 수:${b}`);
+} else {
+  console.log(`필요한 바구니의 수:${b + 1}`);
+}
 
 /*
   [문제3]
@@ -83,6 +87,14 @@ console.log(
   2012
  */
 
+console.log(`[문제4]`);
+let year;
+for (year = 2001; year <= 2012; year++) {
+  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+    console.log(year);
+  }
+}
+
 /*  
  [문제5]
  * 1 10=2x+3y의 해를 구하시오.
@@ -92,3 +104,4 @@ console.log(
  *  x=2, y=2
  *  x=5, y=0
  */
+console.log(`[문제5]`);

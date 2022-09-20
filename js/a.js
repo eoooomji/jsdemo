@@ -4,4 +4,4 @@ window.onload = function () {
   console.log(data.innerText);
 };
 
-$(documet).ready(function () {});
+// $(documet).ready(function () {});
