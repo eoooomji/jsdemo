@@ -78,10 +78,10 @@ let even = 0;
 
 for (let i = 1; i <= 10; i++) {
   if (i % 2 == 1) {
-    odd += i;
-  } else {
-    even += i;
-  }
+    odd = i;
+  // } else {
+  //   even += i;
+  // }
 }
 console.log(`짝수:${even}`);
 console.log(`홀수:${odd}`);

@@ -25,7 +25,7 @@ for (let index = 0; index < color.length; index++) {
   console.log(color[index]);
 }
 
-// 객체 리터널 : {propaerty:value, propaerty:value}
+// 객체 리터럴 : {property:value, property:value}
 // java : element를 가져옴 for(String element : city)
 // javascript : index를 가져옴 for(let idx in city){}
 let city = ['서울', '부산', '대전'];
