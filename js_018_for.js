@@ -3,6 +3,7 @@
 /*
   반복문 - for문
   - 조건식을 만족할 때까지 특정 실행문을 반복해서 실행한다.
+  - 초기식과 조건식은 생략이 가능하다.(조건식 생략하게 되면 무한으로 들어감)
 
   반복문(for)식 예시)
 
@@ -20,7 +21,7 @@
 
   초기식 -> 조건식(true) -> 실행문 -> 증감식
          -> 조건식(true) ->실행문 -> 증감식
-         -> 조건식(false) -> 반복문 빠져나감
+         -> 조건식(false) or break; -> 반복문 빠져나감
 
   continue : 반복문에서 continue를 만나면 조건식으로 이동한다.(if문에서는 증감식을 걸쳐 조건식으로 이동한다.)
   https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/continue
