@@ -11,11 +11,10 @@ protocal: ftp, domain: ftp.microsoft.com
 
 //[출력결과]를 참고하여 separator함수를 구현하세요.
 function separator(data) {
-  let p;
-  let d;
-  for()
-  console.log();
+  let arr = data.split('://');
+  console.log(arr);
 }
+
 separator('http://www.daum.net');
 separator('ftp://ftp.microsoft.com');
 

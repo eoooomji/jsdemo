@@ -77,6 +77,7 @@ console.log(data.indexOf('M')); // 0
 console.log(data.indexOf('B')); // 3
 console.log(data.indexOf('blue')); // 14
 
+// indexOf( a, b); : a의 값을 b의 인덱스 뒤에서 리턴해라.
 let position = data.indexOf('blue');
 console.log(data.indexOf('blue', position + 1)); // 31
 
