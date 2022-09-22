@@ -25,7 +25,7 @@
 
 */
 
-let year = 2012;
+let year = 2011;
 let leapYearCheck = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
 let yearData = leapYearCheck ? '윤년' : '평년';
 if (leapYearCheck) {
