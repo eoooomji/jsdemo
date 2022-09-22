@@ -12,7 +12,7 @@ protocal: ftp, domain: ftp.microsoft.com
 //[출력결과]를 참고하여 separator함수를 구현하세요.
 function separator(data) {
   let arr = data.split('://');
-  console.log(arr);
+  console.log(`protocal: ${arr[0]}, domain: ${arr[1]}`);
 }
 
 separator('http://www.daum.net');
