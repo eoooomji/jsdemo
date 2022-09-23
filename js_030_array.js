@@ -57,6 +57,7 @@ console.log(fruits.sort().reverse()); // [ 'Orane', 'Mango', 'Kiwi', 'Banana', '
 // Tim Sort 알고리즘 : https://d2.naver.com/helloworld/0315536
 let point = [40, 100, 1, 5, 10];
 console.log(point.sort()); // [ 1, 10, 100, 40, 5 ]
+console.log(point.sort().reverse()); // [ 5, 40, 100, 10, 1 ]
 
 // 오름차순
 // [ 1, 5, 10, 40, 100 ]
