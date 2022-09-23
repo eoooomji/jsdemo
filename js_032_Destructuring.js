@@ -27,3 +27,109 @@ let k, p, next;
 console.log(`k=${k}`); // k=1
 console.log(`p=${p}`); // p=2
 console.log(`next=${next}`); // next=3
+
+[k, p, ...next] = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(`k=${k}`); // k=1
+console.log(`p=${p}`); // p=2
+console.log(`next=${next}`); // next=3,5,6,7,8,9
+
+// ' ,' 공백쉼표 혹은 '_' 은 그 인덱스 값을 버리겠다는 의미이다.
+[k, , p, , ...next] = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(`k=${k}`); // k=1
+console.log(`p=${p}`); // p=3
+console.log(`next=${next}`); // 5,6,7,8
+
+[k, _, p, _, ...next] = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(`k=${k}`); // k=1
+console.log(`p=${p}`); // p=3
+console.log(`next=${next}`); // 5,6,7,8
+
+let u, t, w;
+[u, t, w] = [1, 2];
+console.log(`u=${u} t=${t} w=${w}`); // u=1
+
+[u, t, w = 3] = [1, 2];
+console.log(`u=${u} t=${t} w=${w}`); // u=1 t=2 w=3
+
+[u, t = 4, w = 5] = [1, 2];
+console.log(`u=${u} t=${t} w=${w}`); // u=1 t=2 w=5
+
+// 2. 객체 Dstructuring
+
+const customer = { fullname: '고수', job: '연기자' };
+let fullname = customer.fullname;
+let job = customer.job;
+console.log(`fullname: ${fullname}, job: ${job}`); // fullname: 고수, job: 연기자
+
+let { fullname: fn, job: jb } = customer;
+console.log(`fullname: ${fn}, job: ${jb}`); // fullname: 고수, job: 연기자
+
+let { job: work, fullname: fname } = customer;
+console.log(`job: ${work} fullname:${fname}`); // job: 연기자 fullname:고수
+
+let { fullname: name, job: jbn, loc = '서울' } = customer;
+console.log(`fullname:${name}, job:${jbn}, loc:${loc}`); // fullname:고수, job:연기자, loc:서울
+
+let s, r;
+// {s,r} = {s:1, r:2}; 오류 발생
+({ s, r } = { s: 1, r: 2 });
+console.log(`s=${s} r=${r}`); // s=1 r=2
+
+console.log(`============================================`);
+
+// completed의 값이 true인 데이터만 검색하라.
+
+let habits = [
+  { id: 1, content: '수영', completed: false },
+  { id: 2, content: '걷기', completed: true },
+  { id: 3, content: '명상', completed: true },
+  { id: 4, content: '독서', completed: false },
+];
+let listHabit = [];
+for (let idx in habits) {
+  if (habits[idx].completed) {
+    listHabit.push(habits[idx]);
+  }
+}
+
+console.log(`==========`);
+
+console.log(listHabit);
+
+for (let idx in habits) {
+  if (habits[idx].completed) {
+    console.log(habits[idx]);
+  }
+}
+
+console.log(`==========`);
+
+let completedHabit = habits.filter((element) => {
+  return element.completed;
+});
+
+console.log(completedHabit);
+
+console.log(`============================================`);
+
+// member변수에서 데이터를 추출하여 '고수 고객님은 서울에 거주합니다.' 라고 출력하세요.
+
+let member = { hname: '고수', address: { zipCode: '526-143', city: '서울' } };
+//
+
+let { hname, address } = member;
+let { city } = address;
+console.log(`${hname}고객님은 ${city}에 거주합니다.`);
+({
+  hname,
+  address: { city },
+} = member);
+console.log(`${hname}고객님은 ${city}에 거주합니다.`);
+
+let na = member.hname;
+let ci;
+for (let idx in member) {
+  idx = member[idx];
+  ci = idx.city;
+}
+console.log(`${na}고객님은 ${ci}에 거주합니다.`);
