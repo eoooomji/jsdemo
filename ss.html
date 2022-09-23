@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let color = [];
+      console.log(color.length); // 0
+      color[0] = 'red';
+      console.log(color.length); // 1
+      color.push('green');
+      console.log(color.length); // 2
+      color.push(759);
+      console.log(color.length); // 3
+      color[8] = 'blue';
+      console.log(color.length); // 9 [ 'red', 'green', 759, <5 empty items>, 'blue']
+      console.log(color);
+      for (let idx in color) {
+        console.log(`${idx} : ${color[idx]}`);
+      }
+    </script>
+  </body>
+</html>

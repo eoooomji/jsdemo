@@ -34,6 +34,13 @@ let person1 = { name: '홍길동', phone: '010-1234-5678' };
 let person2 = { name: '진여구', phone: '010-253-2253' };
 
 //출력결과를 참고하여 display()함수를 구현하세요
-function display(customer) {}
+function display(customer) {
+  let start = customer.phone.indexOf('-');
+  let end = customer.phone.lastIndexOf('-'); // lastIndexOf : 역순으로 문자열의 인덱스를 리턴
+  console.log(`이름: ${customer.name}`);
+  let searchWord = customer.phone.substring(start + 1, end);
+  let phoneStar = 'x'.repeat(searchWord.length);
+  console.log(`연락처: ${customer.phone.replace(searchWord, phoneStar)}`);
+}
 display(person1);
 display(person2);
