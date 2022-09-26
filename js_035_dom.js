@@ -33,7 +33,7 @@ console.log(hClass, typeof hClass);
 let pNode = document.getElementsByTagName('p');
 console.log(pNode, typeof pNode);
 console.log(pNode.length);
-console.log(pNode[0], pNode.item(0));
+console.log(pNode[0], pNode.item(0)); // pNode[] = pNode.item()
 console.log(pNode[0].innerText);
 
 // 스크립트에서 스타일을 주고 싶을 때
