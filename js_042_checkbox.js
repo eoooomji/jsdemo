@@ -22,10 +22,11 @@ document.frm.allCheck.onclick = function () {
   // document.frm.subject3.checked = this.checked;
   // let checkgroup = document.querySelector('.checkgroup');
   // querySelector : 객체가 그룹 클래스로 묶여있어도 하나의 객체만 가져옴
-  let checkgroup = document.querySelectorAll('.checkgroup');
+  let checkgroup = document.querySelectorAll('.checkgroup'); // NodeList
   console.log(checkgroup.length);
+  console.log(typeof checkgroup, checkgroup instanceof Array);
 
-  /* 
+  /*  첫번째 방법
   // - Arrow Function
   checkgroup.forEach((element) => {
     // console.log(this);
@@ -38,7 +39,7 @@ document.frm.allCheck.onclick = function () {
   /////////////////////////////////////////////////////////////////
   let myThis = this; // document.frm.allCheck
 
-  /*
+  /* 2번째 방법
   // - Anonymous Funcion(Callback Function)
   checkgroup.forEach(function (element) {
     console.log(this);
@@ -49,6 +50,7 @@ document.frm.allCheck.onclick = function () {
 
   //////////////////////////////////////////////////////////////////
 
+  /* 3번째 방법
   // Array.from() : NodeList를 Array로 변환
   console.log(`${checkgroup}`); // [object NodeList]
 
@@ -58,6 +60,19 @@ document.frm.allCheck.onclick = function () {
 
   myArray.map(function (element) {
     // console.log(this);
+    element.checked = myThis.checked;
+  });
+  */
+
+  // forEach는 배열 전용 메서드이다. checkgroup은 배열이 아니라 map을 사용 못하는데 forEach는 사용이 된다?
+  // 이유 : forEach는 자동으로 배열로 만들어 주는 기능이 있다. 다만, 안되는 경우도 있다.
+
+  ////////////////////////////////////////////////////////////////////
+
+  // ES6 Spread operator : NodeList를 Array로 변경
+
+  let iArray = [...checkgroup];
+  iArray.map(function (element) {
     element.checked = myThis.checked;
   });
 };
