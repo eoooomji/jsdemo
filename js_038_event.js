@@ -3,7 +3,7 @@
 /*
 [문서 객체에 이벤트를 적용하는 방법]
 요소선택.이벤트종류=function(){실행할 문장};
-btn.onclick=process;
+btn.onclick=process(콜백함수); // 클릭이 되었을 때 수행하라.
 funtion process(){};
 */
 
