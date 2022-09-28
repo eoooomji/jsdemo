@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js_049_popup.html</title>
+  </head>
+  <body>
+    <!-- usemap : 요소와 연결할 이미지 맵의 프래그먼트. -->
+    <img src="images/popup.jpg" usemap="#pop" />
+    <!-- <map> : <area> 요소와 함께 이미지 맵(클릭 가능한 링크 영역)을 정의할 때 사용 -->
+    <map name="pop" id="pop">
+      <!-- coords='x : start, y : start, x : end, y : end' -->
+      <area
+        shape="rect"
+        coords="255,332,290,345"
+        href="#"
+        alt="창닫기"
+        onclick="window.close()"
+      />
+    </map>
+  </body>
+</html>
